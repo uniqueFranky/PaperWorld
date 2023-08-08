@@ -16,6 +16,7 @@
 		31DCC22C2A822DDA00FAC432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC22A2A822DDA00FAC432 /* LaunchScreen.storyboard */; };
 		31DCC2362A8235AC00FAC432 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2352A8235AC00FAC432 /* avatar.jpg */; };
 		31DCC2382A8236BE00FAC432 /* museum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2372A8236BE00FAC432 /* museum.jpg */; };
+		31DCC23C2A8240FC00FAC432 /* OIP-C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC23B2A8240FC00FAC432 /* OIP-C.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		31DCC2372A8236BE00FAC432 /* museum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = museum.jpg; sourceTree = "<group>"; };
 		31DCC2392A823DA300FAC432 /* Grandstander-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Light.ttf"; sourceTree = "<group>"; };
 		31DCC23A2A823DA800FAC432 /* Grandstander-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Regular.ttf"; sourceTree = "<group>"; };
+		31DCC23B2A8240FC00FAC432 /* OIP-C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "OIP-C.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				31DCC2372A8236BE00FAC432 /* museum.jpg */,
 				31DCC2392A823DA300FAC432 /* Grandstander-Light.ttf */,
 				31DCC23A2A823DA800FAC432 /* Grandstander-Regular.ttf */,
+				31DCC23B2A8240FC00FAC432 /* OIP-C.jpg */,
 				31DCC2352A8235AC00FAC432 /* avatar.jpg */,
 				31DCC22D2A822DDA00FAC432 /* Info.plist */,
 				31DCC2252A822DD900FAC432 /* PaperWorld.xcdatamodeld */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DCC2362A8235AC00FAC432 /* avatar.jpg in Resources */,
+				31DCC23C2A8240FC00FAC432 /* OIP-C.jpg in Resources */,
 				31DCC2382A8236BE00FAC432 /* museum.jpg in Resources */,
 				31DCC22C2A822DDA00FAC432 /* LaunchScreen.storyboard in Resources */,
 				31DCC2292A822DDA00FAC432 /* Assets.xcassets in Resources */,
