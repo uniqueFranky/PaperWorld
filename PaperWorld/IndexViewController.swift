@@ -12,29 +12,39 @@ class IndexViewController: UIViewController {
     let headerView = UIView()
     let tableView = UITableView()
     let names = ["OIP-C", "OIP-C", "OIP-C", "OIP-C"]
+    let colors = [UIColor(hex: "#FCB120FF"), UIColor(hex: "#44A0E4FF"), UIColor(hex: "#52BB89FF"), UIColor(hex: "#EC6552FF")]
+    let settingViewController = SettingViewController()
+    let profileViewController = ProfileViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor(hex: "#FCE8D5FF")
-        initHeaderView(headerView)
-        initTableView(tableView)
+        title = "首页"
+        configure(headerView: headerView)
+        configure(tableView: tableView)
     }
     
-    private func initHeaderView(_ superView: UIView) {
-        let avatarView = UIImageView(image: UIImage(named: "avatar.jpg"))
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    private func configure(headerView: UIView) {
+        let avatarView = UIButton(type: .custom)
         let hintView = UILabel()
         let nameView = UILabel()
         let logoView = UIImageView(image: UIImage(named: "museum.jpg"))
-        let settingButton = UIImageView(image: UIImage(systemName: "gearshape"))
+        let settingButton = UIButton(type: .system)
         
-        view.addSubview(superView)
+        view.addSubview(headerView)
         headerView.addSubview(avatarView)
         headerView.addSubview(hintView)
         headerView.addSubview(nameView)
         headerView.addSubview(logoView)
         headerView.addSubview(settingButton)
         
-        superView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.translatesAutoresizingMaskIntoConstraints = false
         avatarView.translatesAutoresizingMaskIntoConstraints = false
         hintView.translatesAutoresizingMaskIntoConstraints = false
         nameView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,38 +52,40 @@ class IndexViewController: UIViewController {
         settingButton.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
-            avatarView.leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: 20),
-            avatarView.centerYAnchor.constraint(equalTo: superView.centerYAnchor),
+            avatarView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 20),
+            avatarView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
             avatarView.widthAnchor.constraint(equalToConstant: 40),
             avatarView.heightAnchor.constraint(equalTo: avatarView.widthAnchor),
             
             nameView.leadingAnchor.constraint(equalTo: avatarView.trailingAnchor, constant: 10),
-            nameView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
+            nameView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
             nameView.heightAnchor.constraint(equalToConstant: 20),
             nameView.widthAnchor.constraint(equalToConstant: 100),
             
             hintView.leadingAnchor.constraint(equalTo: nameView.leadingAnchor),
-            hintView.topAnchor.constraint(equalTo: superView.topAnchor),
+            hintView.topAnchor.constraint(equalTo: headerView.topAnchor),
             hintView.bottomAnchor.constraint(equalTo: nameView.topAnchor),
             hintView.widthAnchor.constraint(equalToConstant: 100),
             
-            logoView.centerXAnchor.constraint(equalTo: superView.centerXAnchor),
-            logoView.topAnchor.constraint(equalTo: superView.topAnchor),
-            logoView.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
+            logoView.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
+            logoView.topAnchor.constraint(equalTo: headerView.topAnchor),
+            logoView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
             logoView.widthAnchor.constraint(equalToConstant: 64.13),
             
-            settingButton.trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: -20),
-            settingButton.topAnchor.constraint(equalTo: superView.topAnchor),
-            settingButton.bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-            settingButton.widthAnchor.constraint(equalTo: superView.heightAnchor),
+            settingButton.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -20),
+            settingButton.topAnchor.constraint(equalTo: headerView.topAnchor),
+            settingButton.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
+            settingButton.widthAnchor.constraint(equalTo: headerView.heightAnchor),
             
-            superView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            superView.heightAnchor.constraint(equalToConstant: 50),
-            superView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            superView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 50),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ]
         
         view.addConstraints(constraints)
+        
+        avatarView.setImage(UIImage(data: (UserData.fetchAvatar() ?? UIImage(named: "avatar.jpg")!.pngData()!)), for: .normal)
         
         hintView.text = "Hello"
         if let font = UIFont(name: "Grandstander-Light", size: 11) {
@@ -83,20 +95,26 @@ class IndexViewController: UIViewController {
             print("Unable to load font: Grandstander-Light")
         }
         
-        nameView.text = "Fate"
+        nameView.text = UserData.fetchUserName() ?? "No Name"
         if let font = UIFont(name: "Grandstander-Regular", size: 16) {
             nameView.font = font
         } else {
             nameView.font = nameView.font.withSize(16)
             print("Unable to load font: Grandstander-Regular")
         }
+        
+        avatarView.addTarget(self, action: #selector(clickAvatar), for: .touchUpInside)
+        settingButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
+        settingButton.addTarget(self, action: #selector(clickSettingButton), for: .touchUpInside)
     }
     
-    func initTableView(_ tableView: UITableView) {
+    func configure(tableView: UITableView) {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(IndexListCell.self, forCellReuseIdentifier: IndexListCell.reuseIdentifier)
         tableView.rowHeight = 200
+        tableView.separatorStyle = .none
         view.addSubview(tableView)
         let constraints = [
             tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
@@ -107,6 +125,17 @@ class IndexViewController: UIViewController {
         view.addConstraints(constraints)
         
         tableView.backgroundColor = .clear
+        tableView.showsVerticalScrollIndicator = false
+    }
+    
+    @objc func clickSettingButton() {
+        self.navigationController?.pushViewController(settingViewController, animated: true)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    @objc func clickAvatar() {
+        self.navigationController?.pushViewController(profileViewController, animated: true)
+        self.navigationController?.isNavigationBarHidden = false
     }
 }
 
@@ -115,14 +144,18 @@ extension IndexViewController: UITableViewDataSource {
         return 4
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IndexListCell.reuseIdentifier, for: indexPath) as! IndexListCell
-        cell.configureContents(withModel: names[indexPath.row])
+        cell.configureContents(withModel: names[indexPath.row], ofColor: colors[indexPath.row]!)
         return cell
     }
-    
-    
+}
+
+extension IndexViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.isSelected = false
+    }
 }
 
 class IndexListCell: UITableViewCell {
@@ -136,7 +169,7 @@ class IndexListCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
     }
     
-    func configureContents(withModel modelName: String) {
+    func configureContents(withModel modelName: String, ofColor color: UIColor) {
         self.backgroundColor = .clear
         contentView.clipsToBounds = true
         myImageView.image = UIImage(named: modelName + ".jpg")
@@ -171,7 +204,7 @@ class IndexListCell: UITableViewCell {
         descriptorView.numberOfLines = 0
         descriptorView.lineBreakMode = .byWordWrapping
         contentView.layer.cornerRadius = 10
-        contentView.layer.borderWidth = 2
+        contentView.backgroundColor = color
     }
 }
 

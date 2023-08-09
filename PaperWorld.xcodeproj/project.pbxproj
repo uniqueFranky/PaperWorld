@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		31DCC21D2A822DD900FAC432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC21C2A822DD900FAC432 /* AppDelegate.swift */; };
 		31DCC21F2A822DD900FAC432 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC21E2A822DD900FAC432 /* SceneDelegate.swift */; };
-		31DCC2212A822DD900FAC432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2202A822DD900FAC432 /* ViewController.swift */; };
+		31DCC2212A822DD900FAC432 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2202A822DD900FAC432 /* IndexViewController.swift */; };
 		31DCC2242A822DD900FAC432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2222A822DD900FAC432 /* Main.storyboard */; };
 		31DCC2272A822DD900FAC432 /* PaperWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2252A822DD900FAC432 /* PaperWorld.xcdatamodeld */; };
 		31DCC2292A822DDA00FAC432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2282A822DDA00FAC432 /* Assets.xcassets */; };
@@ -17,13 +17,17 @@
 		31DCC2362A8235AC00FAC432 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2352A8235AC00FAC432 /* avatar.jpg */; };
 		31DCC2382A8236BE00FAC432 /* museum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2372A8236BE00FAC432 /* museum.jpg */; };
 		31DCC23C2A8240FC00FAC432 /* OIP-C.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC23B2A8240FC00FAC432 /* OIP-C.jpg */; };
+		31DCC23E2A83482F00FAC432 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC23D2A83482F00FAC432 /* SettingViewController.swift */; };
+		31DCC2402A83549000FAC432 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC23F2A83549000FAC432 /* UserData.swift */; };
+		31DCC2422A835ADC00FAC432 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2412A835ADC00FAC432 /* ProfileViewController.swift */; };
+		31DCC2442A835CCC00FAC432 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2432A835CCC00FAC432 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31DCC2192A822DD900FAC432 /* PaperWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCC21C2A822DD900FAC432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31DCC21E2A822DD900FAC432 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31DCC2202A822DD900FAC432 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31DCC2202A822DD900FAC432 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		31DCC2232A822DD900FAC432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31DCC2262A822DD900FAC432 /* PaperWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaperWorld.xcdatamodel; sourceTree = "<group>"; };
 		31DCC2282A822DDA00FAC432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +38,10 @@
 		31DCC2392A823DA300FAC432 /* Grandstander-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Light.ttf"; sourceTree = "<group>"; };
 		31DCC23A2A823DA800FAC432 /* Grandstander-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Regular.ttf"; sourceTree = "<group>"; };
 		31DCC23B2A8240FC00FAC432 /* OIP-C.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "OIP-C.jpg"; sourceTree = "<group>"; };
+		31DCC23D2A83482F00FAC432 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		31DCC23F2A83549000FAC432 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		31DCC2412A835ADC00FAC432 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		31DCC2432A835CCC00FAC432 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +76,11 @@
 			children = (
 				31DCC21C2A822DD900FAC432 /* AppDelegate.swift */,
 				31DCC21E2A822DD900FAC432 /* SceneDelegate.swift */,
-				31DCC2202A822DD900FAC432 /* ViewController.swift */,
+				31DCC2202A822DD900FAC432 /* IndexViewController.swift */,
+				31DCC2412A835ADC00FAC432 /* ProfileViewController.swift */,
+				31DCC2432A835CCC00FAC432 /* DetailViewController.swift */,
+				31DCC23D2A83482F00FAC432 /* SettingViewController.swift */,
+				31DCC23F2A83549000FAC432 /* UserData.swift */,
 				31DCC2222A822DD900FAC432 /* Main.storyboard */,
 				31DCC2282A822DDA00FAC432 /* Assets.xcassets */,
 				31DCC22A2A822DDA00FAC432 /* LaunchScreen.storyboard */,
@@ -157,10 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DCC2212A822DD900FAC432 /* ViewController.swift in Sources */,
+				31DCC23E2A83482F00FAC432 /* SettingViewController.swift in Sources */,
+				31DCC2212A822DD900FAC432 /* IndexViewController.swift in Sources */,
 				31DCC21D2A822DD900FAC432 /* AppDelegate.swift in Sources */,
 				31DCC21F2A822DD900FAC432 /* SceneDelegate.swift in Sources */,
+				31DCC2422A835ADC00FAC432 /* ProfileViewController.swift in Sources */,
+				31DCC2402A83549000FAC432 /* UserData.swift in Sources */,
 				31DCC2272A822DD900FAC432 /* PaperWorld.xcdatamodeld in Sources */,
+				31DCC2442A835CCC00FAC432 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

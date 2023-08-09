@@ -22,7 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 
         let ivc = IndexViewController()
-        window?.rootViewController = ivc
+        let navi = UINavigationController()
+        navi.pushViewController(ivc, animated: true)
+        window?.rootViewController = navi
         window?.makeKeyAndVisible()
     }
 
