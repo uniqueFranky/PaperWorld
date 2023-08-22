@@ -11,10 +11,15 @@ import SceneKit
 class IndexViewController: UIViewController {
     let headerView = UIView()
     let tableView = UITableView()
-    let names = ["OIP-C", "OIP-C", "OIP-C", "OIP-C"]
-    let colors = [UIColor(hex: "#FCB120FF"), UIColor(hex: "#44A0E4FF"), UIColor(hex: "#52BB89FF"), UIColor(hex: "#EC6552FF")]
+    
     let settingViewController = SettingViewController()
     let profileViewController = ProfileViewController()
+    
+    let names = ModelDatas.names
+    let colors = ModelDatas.colors
+    let simpleDescriptions = ModelDatas.simpleDescriptions
+    let descriptions = ModelDatas.descriptions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -141,12 +146,12 @@ class IndexViewController: UIViewController {
 
 extension IndexViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IndexListCell.reuseIdentifier, for: indexPath) as! IndexListCell
-        cell.configureContents(withModel: names[indexPath.row], ofColor: colors[indexPath.row]!)
+        cell.configureContents(withModel: names[indexPath.row], ofColor: colors[indexPath.row % colors.count]!, withSimpleDescription: simpleDescriptions[indexPath.row])
         return cell
     }
 }
@@ -155,6 +160,9 @@ extension IndexViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.isSelected = false
+        let detailViewController = DetailViewController(model: names[indexPath.row], description: descriptions[indexPath.row])
+        navigationController?.pushViewController(detailViewController, animated: true)
+        navigationController?.isNavigationBarHidden = false
     }
 }
 
@@ -169,12 +177,12 @@ class IndexListCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
     }
     
-    func configureContents(withModel modelName: String, ofColor color: UIColor) {
+    func configureContents(withModel modelName: String, ofColor color: UIColor, withSimpleDescription description: String) {
         self.backgroundColor = .clear
         contentView.clipsToBounds = true
-        myImageView.image = UIImage(named: modelName + ".jpg")
+        myImageView.image = UIImage(named: modelName + ".png")
         titleView.text = modelName
-        descriptorView.text = "This is some descriptions.This is some descriptions.This is some descriptions.This is some descriptions.This is some descriptions.This is some descriptions.This is some descriptions."
+        descriptorView.text = description
         
         contentView.addSubview(myImageView)
         contentView.addSubview(titleView)

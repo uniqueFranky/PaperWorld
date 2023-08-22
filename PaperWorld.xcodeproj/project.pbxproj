@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31703F332A9314E9003BCDA9 /* Cinerary urn.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 31703F322A9314E9003BCDA9 /* Cinerary urn.usdz */; };
+		31703F352A931573003BCDA9 /* Cinerary urn.png in Resources */ = {isa = PBXBuildFile; fileRef = 31703F342A931573003BCDA9 /* Cinerary urn.png */; };
+		31703F372A93170C003BCDA9 /* Conall Cael Bell Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 31703F362A93170C003BCDA9 /* Conall Cael Bell Cover.png */; };
+		31703F392A931761003BCDA9 /* Conall Cael Bell Cover.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 31703F382A931761003BCDA9 /* Conall Cael Bell Cover.usdz */; };
+		31703F3B2A9317A7003BCDA9 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31703F3A2A9317A7003BCDA9 /* Datas.swift */; };
+		31703F3D2A9318FD003BCDA9 /* "Rishi" coffin.png in Resources */ = {isa = PBXBuildFile; fileRef = 31703F3C2A9318FD003BCDA9 /* "Rishi" coffin.png */; };
+		31703F3F2A93190A003BCDA9 /* "Rishi" coffin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 31703F3E2A93190A003BCDA9 /* "Rishi" coffin.usdz */; };
+		31703F432A931A5A003BCDA9 /* Sleeping Hermaphroditos.png in Resources */ = {isa = PBXBuildFile; fileRef = 31703F422A931A5A003BCDA9 /* Sleeping Hermaphroditos.png */; };
+		31703F452A931A61003BCDA9 /* Sleeping Hermaphroditos.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 31703F442A931A61003BCDA9 /* Sleeping Hermaphroditos.usdz */; };
+		31703F472A931AD9003BCDA9 /* Silent Monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 31703F462A931AD9003BCDA9 /* Silent Monitor.png */; };
+		31703F492A931AE0003BCDA9 /* Silent Monitor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 31703F482A931AE0003BCDA9 /* Silent Monitor.usdz */; };
 		31DCC21D2A822DD900FAC432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC21C2A822DD900FAC432 /* AppDelegate.swift */; };
 		31DCC21F2A822DD900FAC432 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC21E2A822DD900FAC432 /* SceneDelegate.swift */; };
 		31DCC2212A822DD900FAC432 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2202A822DD900FAC432 /* IndexViewController.swift */; };
@@ -21,9 +32,21 @@
 		31DCC2402A83549000FAC432 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC23F2A83549000FAC432 /* UserData.swift */; };
 		31DCC2422A835ADC00FAC432 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2412A835ADC00FAC432 /* ProfileViewController.swift */; };
 		31DCC2442A835CCC00FAC432 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DCC2432A835CCC00FAC432 /* DetailViewController.swift */; };
+		31DCC2462A835EFE00FAC432 /* OIP-C.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 31DCC2452A835EFE00FAC432 /* OIP-C.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31703F322A9314E9003BCDA9 /* Cinerary urn.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Cinerary urn.usdz"; sourceTree = "<group>"; };
+		31703F342A931573003BCDA9 /* Cinerary urn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cinerary urn.png"; sourceTree = "<group>"; };
+		31703F362A93170C003BCDA9 /* Conall Cael Bell Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Conall Cael Bell Cover.png"; sourceTree = "<group>"; };
+		31703F382A931761003BCDA9 /* Conall Cael Bell Cover.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Conall Cael Bell Cover.usdz"; sourceTree = "<group>"; };
+		31703F3A2A9317A7003BCDA9 /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
+		31703F3C2A9318FD003BCDA9 /* "Rishi" coffin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "\"Rishi\" coffin.png"; sourceTree = "<group>"; };
+		31703F3E2A93190A003BCDA9 /* "Rishi" coffin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "\"Rishi\" coffin.usdz"; sourceTree = "<group>"; };
+		31703F422A931A5A003BCDA9 /* Sleeping Hermaphroditos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sleeping Hermaphroditos.png"; sourceTree = "<group>"; };
+		31703F442A931A61003BCDA9 /* Sleeping Hermaphroditos.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Sleeping Hermaphroditos.usdz"; sourceTree = "<group>"; };
+		31703F462A931AD9003BCDA9 /* Silent Monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Silent Monitor.png"; sourceTree = "<group>"; };
+		31703F482A931AE0003BCDA9 /* Silent Monitor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Silent Monitor.usdz"; sourceTree = "<group>"; };
 		31DCC2192A822DD900FAC432 /* PaperWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DCC21C2A822DD900FAC432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31DCC21E2A822DD900FAC432 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +65,7 @@
 		31DCC23F2A83549000FAC432 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		31DCC2412A835ADC00FAC432 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31DCC2432A835CCC00FAC432 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		31DCC2452A835EFE00FAC432 /* OIP-C.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "OIP-C.usdz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +105,18 @@
 				31DCC2432A835CCC00FAC432 /* DetailViewController.swift */,
 				31DCC23D2A83482F00FAC432 /* SettingViewController.swift */,
 				31DCC23F2A83549000FAC432 /* UserData.swift */,
+				31703F342A931573003BCDA9 /* Cinerary urn.png */,
+				31703F322A9314E9003BCDA9 /* Cinerary urn.usdz */,
+				31703F362A93170C003BCDA9 /* Conall Cael Bell Cover.png */,
+				31703F382A931761003BCDA9 /* Conall Cael Bell Cover.usdz */,
+				31703F3C2A9318FD003BCDA9 /* "Rishi" coffin.png */,
+				31703F3E2A93190A003BCDA9 /* "Rishi" coffin.usdz */,
+				31703F422A931A5A003BCDA9 /* Sleeping Hermaphroditos.png */,
+				31703F442A931A61003BCDA9 /* Sleeping Hermaphroditos.usdz */,
+				31703F462A931AD9003BCDA9 /* Silent Monitor.png */,
+				31703F482A931AE0003BCDA9 /* Silent Monitor.usdz */,
 				31DCC2222A822DD900FAC432 /* Main.storyboard */,
+				31DCC2452A835EFE00FAC432 /* OIP-C.usdz */,
 				31DCC2282A822DDA00FAC432 /* Assets.xcassets */,
 				31DCC22A2A822DDA00FAC432 /* LaunchScreen.storyboard */,
 				31DCC2372A8236BE00FAC432 /* museum.jpg */,
@@ -91,6 +126,7 @@
 				31DCC2352A8235AC00FAC432 /* avatar.jpg */,
 				31DCC22D2A822DDA00FAC432 /* Info.plist */,
 				31DCC2252A822DD900FAC432 /* PaperWorld.xcdatamodeld */,
+				31703F3A2A9317A7003BCDA9 /* Datas.swift */,
 			);
 			path = PaperWorld;
 			sourceTree = "<group>";
@@ -153,12 +189,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31703F432A931A5A003BCDA9 /* Sleeping Hermaphroditos.png in Resources */,
 				31DCC2362A8235AC00FAC432 /* avatar.jpg in Resources */,
 				31DCC23C2A8240FC00FAC432 /* OIP-C.jpg in Resources */,
+				31703F492A931AE0003BCDA9 /* Silent Monitor.usdz in Resources */,
+				31703F352A931573003BCDA9 /* Cinerary urn.png in Resources */,
 				31DCC2382A8236BE00FAC432 /* museum.jpg in Resources */,
+				31703F392A931761003BCDA9 /* Conall Cael Bell Cover.usdz in Resources */,
 				31DCC22C2A822DDA00FAC432 /* LaunchScreen.storyboard in Resources */,
 				31DCC2292A822DDA00FAC432 /* Assets.xcassets in Resources */,
+				31DCC2462A835EFE00FAC432 /* OIP-C.usdz in Resources */,
+				31703F3F2A93190A003BCDA9 /* "Rishi" coffin.usdz in Resources */,
+				31703F372A93170C003BCDA9 /* Conall Cael Bell Cover.png in Resources */,
+				31703F3D2A9318FD003BCDA9 /* "Rishi" coffin.png in Resources */,
+				31703F472A931AD9003BCDA9 /* Silent Monitor.png in Resources */,
+				31703F332A9314E9003BCDA9 /* Cinerary urn.usdz in Resources */,
 				31DCC2242A822DD900FAC432 /* Main.storyboard in Resources */,
+				31703F452A931A61003BCDA9 /* Sleeping Hermaphroditos.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +220,7 @@
 				31DCC2212A822DD900FAC432 /* IndexViewController.swift in Sources */,
 				31DCC21D2A822DD900FAC432 /* AppDelegate.swift in Sources */,
 				31DCC21F2A822DD900FAC432 /* SceneDelegate.swift in Sources */,
+				31703F3B2A9317A7003BCDA9 /* Datas.swift in Sources */,
 				31DCC2422A835ADC00FAC432 /* ProfileViewController.swift in Sources */,
 				31DCC2402A83549000FAC432 /* UserData.swift in Sources */,
 				31DCC2272A822DD900FAC432 /* PaperWorld.xcdatamodeld in Sources */,
